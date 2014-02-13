@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2D92B5D6-01A8-4DA6-BBD1-6DA70A5B5397}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WeatherApp</RootNamespace>
+    <AssemblyName>WeatherApp</AssemblyName>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>WeatherApp_$(Configuration)_$(Platform).xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>WeatherApp.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|ARM' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\ARM\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|ARM' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\ARM\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AddCityPage.xaml.cs">
+      <DependentUpon>AddCityPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Code\AppTilesManager.cs" />
+    <Compile Include="Code\City.cs" />
+    <Compile Include="Code\Country.cs" />
+    <Compile Include="Code\FlickrServiceManager.cs" />
+    <Compile Include="Code\WeatherAppStorage.cs" />
+    <Compile Include="Code\WeatherManager.cs" />
+    <Compile Include="Code\WeatherProgressIndicator.cs" />
+    <Compile Include="Code\WeatherViewModel.cs" />
+    <Compile Include="Code\WebServiceManager.cs" />
+    <Compile Include="Code\WeatherWeeklyForecast.cs" />
+    <Compile Include="Code\LocationManager.cs" />
+    <Compile Include="Code\WeatherDailyForecast.cs" />
+    <Compile Include="Code\CurrentWeather.cs" />
+    <Compile Include="Code\WeatherBase.cs" />
+    <Compile Include="Controls\TileControl.xaml.cs">
+      <DependentUpon>TileControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LocalizedStrings.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PanoramaPage1.xaml.cs">
+      <DependentUpon>PanoramaPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\AppResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="AddCityPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TileControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PanoramaPage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="28.png" />
+    <Content Include="Assets\ApplicationIcon.png" />
+    <Content Include="Assets\AlignmentGrid.png" />
+    <Content Include="Assets\AppbarImages\favs.png" />
+    <Content Include="Assets\AppbarImages\minus.png" />
+    <Content Include="Assets\AppbarImages\new.png" />
+    <Content Include="Assets\AppbarImages\refresh.png" />
+    <Content Include="Assets\AppbarImages\save.png" />
+    <Content Include="Assets\AppbarImages\share.png" />
+    <Content Include="Assets\AppbarImages\stop.png" />
+    <Content Include="Assets\CountryFlags\ABW.png" />
+    <Content Include="Assets\CountryFlags\AFG.png" />
+    <Content Include="Assets\CountryFlags\AGO.png" />
+    <Content Include="Assets\CountryFlags\AIA.png" />
+    <Content Include="Assets\CountryFlags\ALA.png" />
+    <Content Include="Assets\CountryFlags\ALB.png" />
+    <Content Include="Assets\CountryFlags\AND.png" />
+    <Content Include="Assets\CountryFlags\ANT.png" />
+    <Content Include="Assets\CountryFlags\ARE.png" />
+    <Content Include="Assets\CountryFlags\ARG.png" />
+    <Content Include="Assets\CountryFlags\ARM.png" />
+    <Content Include="Assets\CountryFlags\ASM.png" />
+    <Content Include="Assets\CountryFlags\ATA.png" />
+    <Content Include="Assets\CountryFlags\ATF.png" />
+    <Content Include="Assets\CountryFlags\ATG.png" />
+    <Content Include="Assets\CountryFlags\AUS.png" />
+    <Content Include="Assets\CountryFlags\AUT.png" />
+    <Content Include="Assets\CountryFlags\AZE.png" />
+    <Content Include="Assets\CountryFlags\BDI.png" />
+    <Content Include="Assets\CountryFlags\BEL.png" />
+    <Content Include="Assets\CountryFlags\BEN.png" />
+    <Content Include="Assets\CountryFlags\BFA.png" />
+    <Content Include="Assets\CountryFlags\BGD.png" />
+    <Content Include="Assets\CountryFlags\BGR.png" />
+    <Content Include="Assets\CountryFlags\BHR.png" />
+    <Content Include="Assets\CountryFlags\BHS.png" />
+    <Content Include="Assets\CountryFlags\BIH.png" />
+    <Content Include="Assets\CountryFlags\BLM.png" />
+    <Content Include="Assets\CountryFlags\BLR.png" />
+    <Content Include="Assets\CountryFlags\BLZ.png" />
+    <Content Include="Assets\CountryFlags\BMU.png" />
+    <Content Include="Assets\CountryFlags\BOL.png" />
+    <Content Include="Assets\CountryFlags\BRA.png" />
+    <Content Include="Assets\CountryFlags\BRB.png" />
+    <Content Include="Assets\CountryFlags\BRN.png" />
+    <Content Include="Assets\CountryFlags\BTN.png" />
+    <Content Include="Assets\CountryFlags\BVT.png" />
+    <Content Include="Assets\CountryFlags\BWA.png" />
+    <Content Include="Assets\CountryFlags\CAF.png" />
+    <Content Include="Assets\CountryFlags\CAN.png" />
+    <Content Include="Assets\CountryFlags\CCK.png" />
+    <Content Include="Assets\CountryFlags\CHE.png" />
+    <Content Include="Assets\CountryFlags\CHL.png" />
+    <Content Include="Assets\CountryFlags\CHN.png" />
+    <Content Include="Assets\CountryFlags\CIV.png" />
+    <Content Include="Assets\CountryFlags\CMR.png" />
+    <Content Include="Assets\CountryFlags\COD.png" />
+    <Content Include="Assets\CountryFlags\COG.png" />
+    <Content Include="Assets\CountryFlags\COK.png" />
+    <Content Include="Assets\CountryFlags\COL.png" />
+    <Content Include="Assets\CountryFlags\COM.png" />
+    <Content Include="Assets\CountryFlags\CPV.png" />
+    <Content Include="Assets\CountryFlags\CRI.png" />
+    <Content Include="Assets\CountryFlags\CUB.png" />
+    <Content Include="Assets\CountryFlags\CUW.png" />
+    <Content Include="Assets\CountryFlags\CXR.png" />
+    <Content Include="Assets\CountryFlags\CYM.png" />
+    <Content Include="Assets\CountryFlags\CYP.png" />
+    <Content Include="Assets\CountryFlags\CZE.png" />
+    <Content Include="Assets\CountryFlags\DEU.png" />
+    <Content Include="Assets\CountryFlags\DJI.png" />
+    <Content Include="Assets\CountryFlags\DMA.png" />
+    <Content Include="Assets\CountryFlags\DNK.png" />
+    <Content Include="Assets\CountryFlags\DOM.png" />
+    <Content Include="Assets\CountryFlags\DZA.png" />
+    <Content Include="Assets\CountryFlags\ECU.png" />
+    <Content Include="Assets\CountryFlags\EGY.png" />
+    <Content Include="Assets\CountryFlags\ERI.png" />
+    <Content Include="Assets\CountryFlags\ESH.png" />
+    <Content Include="Assets\CountryFlags\ESP.png" />
+    <Content Include="Assets\CountryFlags\EST.png" />
+    <Content Include="Assets\CountryFlags\ETH.png" />
+    <Content Include="Assets\CountryFlags\FIN.png" />
+    <Content Include="Assets\CountryFlags\FJI.png" />
+    <Content Include="Assets\CountryFlags\FLK.png" />
+    <Content Include="Assets\CountryFlags\FRA.png" />
+    <Content Include="Assets\CountryFlags\FRO.png" />
+    <Content Include="Assets\CountryFlags\FSM.png" />
+    <Content Include="Assets\CountryFlags\GAB.png" />
+    <Content Include="Assets\CountryFlags\GBR.png" />
+    <Content Include="Assets\CountryFlags\GEO.png" />
+    <Content Include="Assets\CountryFlags\GGY.png" />
+    <Content Include="Assets\CountryFlags\GHA.png" />
+    <Content Include="Assets\CountryFlags\GIB.png" />
+    <Content Include="Assets\CountryFlags\GIN.png" />
+    <Content Include="Assets\CountryFlags\GLP.png" />
+    <Content Include="Assets\CountryFlags\GMB.png" />
+    <Content Include="Assets\CountryFlags\GNB.png" />
+    <Content Include="Assets\CountryFlags\GNQ.png" />
+    <Content Include="Assets\CountryFlags\GRC.png" />
+    <Content Include="Assets\CountryFlags\GRD.png" />
+    <Content Include="Assets\CountryFlags\GRL.png" />
+    <Content Include="Assets\CountryFlags\GTM.png" />
+    <Content Include="Assets\CountryFlags\GUF.png" />
+    <Content Include="Assets\CountryFlags\GUM.png" />
+    <Content Include="Assets\CountryFlags\GUY.png" />
+    <Content Include="Assets\CountryFlags\HKG.png" />
+    <Content Include="Assets\CountryFlags\HMD.png" />
+    <Content Include="Assets\CountryFlags\HND.png" />
+    <Content Include="Assets\CountryFlags\HRV.png" />
+    <Content Include="Assets\CountryFlags\HTI.png" />
+    <Content Include="Assets\CountryFlags\HUN.png" />
+    <Content Include="Assets\CountryFlags\IDN.png" />
+    <Content Include="Assets\CountryFlags\IMN.png" />
+    <Content Include="Assets\CountryFlags\IND.png" />
+    <Content Include="Assets\CountryFlags\IOT.png" />
+    <Content Include="Assets\CountryFlags\IRL.png" />
+    <Content Include="Assets\CountryFlags\IRN.png" />
+    <Content Include="Assets\CountryFlags\IRQ.png" />
+    <Content Include="Assets\CountryFlags\ISL.png" />
+    <Content Include="Assets\CountryFlags\ISR.png" />
+    <Content Include="Assets\CountryFlags\ITA.png" />
+    <Content Include="Assets\CountryFlags\JAM.png" />
+    <Content Include="Assets\CountryFlags\JEY.png" />
+    <Content Include="Assets\CountryFlags\JOR.png" />
+    <Content Include="Assets\CountryFlags\JPN.png" />
+    <Content Include="Assets\CountryFlags\KAZ.png" />
+    <Content Include="Assets\CountryFlags\KEN.png" />
+    <Content Include="Assets\CountryFlags\KGZ.png" />
+    <Content Include="Assets\CountryFlags\KHM.png" />
+    <Content Include="Assets\CountryFlags\KIR.png" />
+    <Content Include="Assets\CountryFlags\KNA.png" />
+    <Content Include="Assets\CountryFlags\KOR.png" />
+    <Content Include="Assets\CountryFlags\KWT.png" />
+    <Content Include="Assets\CountryFlags\LAO.png" />
+    <Content Include="Assets\CountryFlags\LBN.png" />
+    <Content Include="Assets\CountryFlags\LBR.png" />
+    <Content Include="Assets\CountryFlags\LBY.png" />
+    <Content Include="Assets\CountryFlags\LCA.png" />
+    <Content Include="Assets\CountryFlags\LIE.png" />
+    <Content Include="Assets\CountryFlags\LKA.png" />
+    <Content Include="Assets\CountryFlags\LSO.png" />
+    <Content Include="Assets\CountryFlags\LTU.png" />
+    <Content Include="Assets\CountryFlags\LUX.png" />
+    <Content Include="Assets\CountryFlags\LVA.png" />
+    <Content Include="Assets\CountryFlags\MAC.png" />
+    <Content Include="Assets\CountryFlags\MAF.png" />
+    <Content Include="Assets\CountryFlags\MAR.png" />
+    <Content Include="Assets\CountryFlags\MCO.png" />
+    <Content Include="Assets\CountryFlags\MDA.png" />
+    <Content Include="Assets\CountryFlags\MDG.png" />
+    <Content Include="Assets\CountryFlags\MDV.png" />
+    <Content Include="Assets\CountryFlags\MEX.png" />
+    <Content Include="Assets\CountryFlags\MHL.png" />
+    <Content Include="Assets\CountryFlags\MKD.png" />
+    <Content Include="Assets\CountryFlags\MLI.png" />
+    <Content Include="Assets\CountryFlags\MLT.png" />
+    <Content Include="Assets\CountryFlags\MMR.png" />
+    <Content Include="Assets\CountryFlags\MNE.png" />
+    <Content Include="Assets\CountryFlags\MNG.png" />
+    <Content Include="Assets\CountryFlags\MNP.png" />
+    <Content Include="Assets\CountryFlags\MOZ.png" />
+    <Content Include="Assets\CountryFlags\MRT.png" />
+    <Content Include="Assets\CountryFlags\MSR.png" />
+    <Content Include="Assets\CountryFlags\MTQ.png" />
+    <Content Include="Assets\CountryFlags\MUS.png" />
+    <Content Include="Assets\CountryFlags\MWI.png" />
+    <Content Include="Assets\CountryFlags\MYS.png" />
+    <Content Include="Assets\CountryFlags\MYT.png" />
+    <Content Include="Assets\CountryFlags\NAM.png" />
+    <Content Include="Assets\CountryFlags\NCL.png" />
+    <Content Include="Assets\CountryFlags\NER.png" />
+    <Content Include="Assets\CountryFlags\NFK.png" />
+    <Content Include="Assets\CountryFlags\NGA.png" />
+    <Content Include="Assets\CountryFlags\NIC.png" />
+    <Content Include="Assets\CountryFlags\NIU.png" />
+    <Content Include="Assets\CountryFlags\NLD.png" />
+    <Content Include="Assets\CountryFlags\NOR.png" />
+    <Content Include="Assets\CountryFlags\NPL.png" />
+    <Content Include="Assets\CountryFlags\NRU.png" />
+    <Content Include="Assets\CountryFlags\NZL.png" />
+    <Content Include="Assets\CountryFlags\OMN.png" />
+    <Content Include="Assets\CountryFlags\PAK.png" />
+    <Content Include="Assets\CountryFlags\PAN.png" />
+    <Content Include="Assets\CountryFlags\PCN.png" />
+    <Content Include="Assets\CountryFlags\PER.png" />
+    <Content Include="Assets\CountryFlags\PHL.png" />
+    <Content Include="Assets\CountryFlags\PLW.png" />
+    <Content Include="Assets\CountryFlags\PNG.png" />
+    <Content Include="Assets\CountryFlags\POL.png" />
+    <Content Include="Assets\CountryFlags\PRI.png" />
+    <Content Include="Assets\CountryFlags\PRK.png" />
+    <Content Include="Assets\CountryFlags\PRT.png" />
+    <Content Include="Assets\CountryFlags\PRY.png" />
+    <Content Include="Assets\CountryFlags\PSE.png" />
+    <Content Include="Assets\CountryFlags\PYF.png" />
+    <Content Include="Assets\CountryFlags\QAT.png" />
+    <Content Include="Assets\CountryFlags\REU.png" />
+    <Content Include="Assets\CountryFlags\ROU.png" />
+    <Content Include="Assets\CountryFlags\RUS.png" />
+    <Content Include="Assets\CountryFlags\RWA.png" />
+    <Content Include="Assets\CountryFlags\SAU.png" />
+    <Content Include="Assets\CountryFlags\SDN.png" />
+    <Content Include="Assets\CountryFlags\SEN.png" />
+    <Content Include="Assets\CountryFlags\SGP.png" />
+    <Content Include="Assets\CountryFlags\SGS.png" />
+    <Content Include="Assets\CountryFlags\SHN.png" />
+    <Content Include="Assets\CountryFlags\SJM.png" />
+    <Content Include="Assets\CountryFlags\SLB.png" />
+    <Content Include="Assets\CountryFlags\SLE.png" />
+    <Content Include="Assets\CountryFlags\SLV.png" />
+    <Content Include="Assets\CountryFlags\SMR.png" />
+    <Content Include="Assets\CountryFlags\SOM.png" />
+    <Content Include="Assets\CountryFlags\SPM.png" />
+    <Content Include="Assets\CountryFlags\SRB.png" />
+    <Content Include="Assets\CountryFlags\SSD.png" />
+    <Content Include="Assets\CountryFlags\STP.png" />
+    <Content Include="Assets\CountryFlags\SUR.png" />
+    <Content Include="Assets\CountryFlags\SVK.png" />
+    <Content Include="Assets\CountryFlags\SVN.png" />
+    <Content Include="Assets\CountryFlags\SWE.png" />
+    <Content Include="Assets\CountryFlags\SWZ.png" />
+    <Content Include="Assets\CountryFlags\SXM.png" />
+    <Content Include="Assets\CountryFlags\SYC.png" />
+    <Content Include="Assets\CountryFlags\SYR.png" />
+    <Content Include="Assets\CountryFlags\TCA.png" />
+    <Content Include="Assets\CountryFlags\TCD.png" />
+    <Content Include="Assets\CountryFlags\TGO.png" />
+    <Content Include="Assets\CountryFlags\THA.png" />
+    <Content Include="Assets\CountryFlags\TJK.png" />
+    <Content Include="Assets\CountryFlags\TKL.png" />
+    <Content Include="Assets\CountryFlags\TKM.png" />
+    <Content Include="Assets\CountryFlags\TLS.png" />
+    <Content Include="Assets\CountryFlags\TON.png" />
+    <Content Include="Assets\CountryFlags\TTO.png" />
+    <Content Include="Assets\CountryFlags\TUN.png" />
+    <Content Include="Assets\CountryFlags\TUR.png" />
+    <Content Include="Assets\CountryFlags\TUV.png" />
+    <Content Include="Assets\CountryFlags\TWN.png" />
+    <Content Include="Assets\CountryFlags\TZA.png" />
+    <Content Include="Assets\CountryFlags\UGA.png" />
+    <Content Include="Assets\CountryFlags\UKR.png" />
+    <Content Include="Assets\CountryFlags\UMI.png" />
+    <Content Include="Assets\CountryFlags\URY.png" />
+    <Content Include="Assets\CountryFlags\USA.png" />
+    <Content Include="Assets\CountryFlags\UZB.png" />
+    <Content Include="Assets\CountryFlags\VAT.png" />
+    <Content Include="Assets\CountryFlags\VCT.png" />
+    <Content Include="Assets\CountryFlags\VEN.png" />
+    <Content Include="Assets\CountryFlags\VGB.png" />
+    <Content Include="Assets\CountryFlags\VIR.png" />
+    <Content Include="Assets\CountryFlags\VNM.png" />
+    <Content Include="Assets\CountryFlags\VUT.png" />
+    <Content Include="Assets\CountryFlags\WLF.png" />
+    <Content Include="Assets\CountryFlags\WSM.png" />
+    <Content Include="Assets\CountryFlags\XKX.png" />
+    <Content Include="Assets\CountryFlags\YEM.png" />
+    <Content Include="Assets\CountryFlags\ZAF.png" />
+    <Content Include="Assets\CountryFlags\ZMB.png" />
+    <Content Include="Assets\CountryFlags\ZWE.png" />
+    <Content Include="Assets\geolocate48.png" />
+    <Content Include="Assets\TileBackground.png" />
+    <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileMedium.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\IconicTileMediumLarge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\IconicTileSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\WeatherImages\01d.png" />
+    <Content Include="Assets\WeatherImages\01n.png" />
+    <Content Include="Assets\WeatherImages\02d.png" />
+    <Content Include="Assets\WeatherImages\02n.png" />
+    <Content Include="Assets\WeatherImages\03d.png" />
+    <Content Include="Assets\WeatherImages\03n.png" />
+    <Content Include="Assets\WeatherImages\04d.png" />
+    <Content Include="Assets\WeatherImages\04n.png" />
+    <Content Include="Assets\WeatherImages\09d.png" />
+    <Content Include="Assets\WeatherImages\09n.png" />
+    <Content Include="Assets\WeatherImages\10d.png" />
+    <Content Include="Assets\WeatherImages\10n.png" />
+    <Content Include="Assets\WeatherImages\11d.png" />
+    <Content Include="Assets\WeatherImages\11n.png" />
+    <Content Include="Assets\WeatherImages\13d.png" />
+    <Content Include="Assets\WeatherImages\13n.png" />
+    <Content Include="Assets\WeatherImages\50d.png" />
+    <Content Include="Assets\WeatherImages\50n.png" />
+    <Content Include="Assets\WeatherImages\DXBTest.jpg" />
+    <Content Include="Assets\WeatherImages\wind-turbine-128 LightBelow.png" />
+    <Content Include="Assets\WeatherImages\wind-turbine-128.png" />
+    <Content Include="Assets\WeatherImages\wind-turbine-128Blue.png" />
+    <Content Include="Assets\WeatherImages\wind-turbine-128Green.png" />
+    <Content Include="Data\CountryList.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Advertising.Mobile, Version=6.2.960.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="microsoft.advertising.mobile.ui, Version=6.2.960.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls, Version=8.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Maps, Version=8.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.5.0.8\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>packages\Microsoft.Net.Http.2.2.18\lib\sl4-windowsphone71\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>packages\Microsoft.Net.Http.2.2.18\lib\sl4-windowsphone71\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>packages\Microsoft.Net.Http.2.2.18\lib\sl4-windowsphone71\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+  <Import Project="packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets" Condition="Exists('packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+</Project>
